@@ -1,0 +1,73 @@
+<div class="container">
+  <!-- 標題 -->
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 style="color: white;">你想對誰說幹話</h1>
+    </div>
+  </div>
+  <!-- 選項 -->
+  <form method="POST" action="/">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="developer"
+            height="280">
+          <div class="card-body">
+            <div class="form-check text-center">
+              <input class="form-check-input" type="radio" name="opt" id="engineer" value="engineer"
+                {{#if option.engineer}} checked {{/if}}>
+              <label class="form-check-label" for="engineer">
+                Engineer
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="designer"
+            height="280">
+          <div class="card-body">
+            <div class="form-check text-center">
+              <input class="form-check-input" type="radio" name="opt" id="designer" value="designer"
+                {{#if option.designer}} checked {{/if}}>
+              <label class="form-check-label" for="designer">
+                Designer
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <img class="card-img-top"
+            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+            alt="entrepreneur" height="280">
+          <div class="card-body">
+            <div class="form-check text-center">
+              <input class="form-check-input" type="radio" name="opt" id="entrepreneur" value="entrepreneur"
+                {{#if option.entrepreneur}} checked {{/if}}>
+              <label class="form-check-label" for="entrepreneur">
+                Entrepreneur
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 結果 -->
+    <div class="row mt-3">
+      <div class="col-sm-2 text-right">
+        <button type="submit" class="btn btn-primary">產生幹話</button>
+      </div>
+      {{#if trash}}
+      <div class="col-sm-9 alert alert-info form-control d-flex align-items-center" role="alert">
+        <span>{{trash}}</span>
+      </div>
+      {{/if}}
+
+    </div>
+  </form>
+</div>
