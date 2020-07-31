@@ -18,21 +18,25 @@ function sample(array) {
 
 // define trashTalk function
 function trashTalk(input) {
-  if (input.opt === undefind) {
+  if (input.opt === undefined) {
     return 'Please select one character 再選一個職業吧'
+
+
   }
+
   const target = input.opt
   // create a result string to collect ans
-  let result = ['身為一個']
-  // get target 
-  result = result.concat(character[target])
-  result.push('，')
-  // get task 
-  result = result.concat(sample(task[target]))
-  result.push('，')
-  // get phrase 
-  result = result.concat(sample(phrase))
-  result.push('吧！')
-  return result.join("")
+  // let result = ['身為一個']
+  // // get target 
+  // result = result.concat(character[target])
+  // result.push('，')
+  // // get task 
+  // result = result.concat(sample(task[target]))
+  // result.push('，')
+  // // get phrase 
+  // result = result.concat(sample(phrase))
+  // result.push('吧！')
+  // return result.join("")
+  return `身為一個${character[target]}，${sample(task[target])}，${sample(phrase)}吧！`
 }
 module.exports = trashTalk
